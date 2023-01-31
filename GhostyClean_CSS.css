@@ -1,268 +1,83 @@
-/* Variables */
-
-:root {
-  --ingame-bg: #0000004a;
-  --ts: #00000078;
-  --white: #ffffff;
+#mainLogo { display: none!important; }
+:root{
+    --dose: cute;
+    --yellow: #fbc02d;
+    --blue: #2196F3;
+    --green: #b2f252;
+    --red: #ed4242;
 }
-
-/* Fonts */
 
 @font-face {
-  font-family: gamefont;
-  src: url(https://fonts.gstatic.com/s/nunito/v20/XRXI3I6Li01BKofiOc5wtlZ2di8HDDsmdTQ3jw.woff2);
+    font-family:gamefont;
+    src:url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2);
 }
 
-/* REMOVAL CSS BY ENVY */
-
-/* Updated 11/20 */
-
-/* Removal */
-
-#hudClassIcon,
-#ammoIcon,
-#challIcon,
-#timerIcon,
-#mainLogo,
-#curGameInfo > div {
-  display: none !important;
-}
-#aHolder,
-#clientExit,
-#rankedSoonTm,
-#newsHolder,
-#youNewDiv,
-#onetrust-consent-sdk,
-.weapKey,
-.imageButton,
-#editorBtnM,
-.headerBarRight .verticalSeparator,
-#seasonLabel,
-.krSocial,
-#mailCount,
-#voiceDisplay,
-#bubbleContainer,
-.endAHolder,
-#igXPBar,
-.button.small.buttonO img,
-#tlInfHold,
-#loadEditrBtn,
-.settingsBtn[onclick="openOneTrust()"],
-.menuSocialB,
-.setSugBox2,
-#mainLogo,
-#termsInfo :not(div[onClick*="Window(35)"]),
-.menuItemTitle,
-#weapDisplay,
-#menuWindow::-webkit-scrollbar,
-#maxHP,
-#loadTipsHolder,
-#loadInfoLHolder,
-#loadInfoRHolder,
-#curGameInfo,
-#reloadMsg {
-  display: none !important;
+@font-face {
+	font-family:hpammo;
+	src:url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2);
 }
 
-.verticalSeparator {
-  background-color: transparent;
+#initLoader {
+  background: #000;
 }
 
-.button,
-.button:hover,
-.quickJoin,
-.setHed {
-  border: hidden !important;
+
+/* UI */
+
+#curGameInfo { font-size: 0 }
+#curGameInfo::after {
+   content: " ";
+   font-size: 25px;
+   color:#f58a42;
 }
 
-.button.buttonB {
-  height: 65px !important;
-}
-#subLogoButtons {
-  bottom: 8% !important;
+.menuClassPlayerClan {
+    font-size: 0;
 }
 
-/* Menu Item Container */
-
-#menuItemContainer {
-  background-color: var(--ingame-bg);
+.leaderNameM {
+    font-size: 0;
 }
 
-.menuItem .menBtnIcn {
-  font-size: 45px !important;
+.leaderNameM::Before {
+    content: url()url() " ★";
+   font-size: 19px;
+   color: white;
 }
 
-/* HeaderBar */
-.headerBar.headerBarRight {
-  background-color: transparent;
+.settName, .settNameSmall, .setHed, .setBodH, #hostActionH, .mFeatSepar{
+    border: hidden!important;
+    background: transparent !important;
 }
 
-.headerBar {
-  background-color: var(--ingame-bg);
+.sliderVal, .selectorItem, .chalCard{
+    border: hidden!important;
 }
 
-/* Chat Holder */
-
-#chatInputHolder {
-  width: calc(100% + 40px) !important;
-  background-color: var(--ingame-bg);
-  border: none;
-  padding-left: 0;
+#menuWindowHider div[style="height:15px;margin-top:30px;border-top:4px solid rgba(255, 255, 255, 0.8);"]{
+    display: none!important
 }
 
-#chatInput {
-  width: 80%;
-  margin-left: 25px;
-  background-color: transparent;
+#customizeButton {
+    bottom: 210px;
+    height: 300px;
+    color: transparent!important;
+    background-color: transparent!Important;
+    box-shadow: none!important;
+    top: -250px;
+    left: -27px;
+    transform: scale(1.3);
+    clip-path: polygon(43% 31%, 49% 24%, 69% 26%, 70% 48%, 80% 51%, 85% 59%, 73% 73%, 73% 94%, 40% 96%, 41% 86%, 29% 83%, 29% 73%, 17% 81%, 15% 73%, 20% 74%, 22% 69%, 26% 65%, 28% 51%, 42% 48%, 43% 42%);
 }
 
-#chatSwitchHolder {
-  background-color: transparent;
-  display: inline-block;
-  position: absolute;
-  left: 5px;
+#menuClassNameTag {
+    margin-top: -600px;
+    position: absolute;
+    text-shadow: none;
+    color: #fff;
+    z-index: 100;
+    font-size: 19px
 }
-/* ammo */
-
-#ammoDisplay {
-  padding: 12px 5px !important;
-  height: 50px !important;
-}
-
-/* timer */
-
-#timerDisplay {
-  align-items: center;
-  padding: 10px 7px 4px 7px !important;
-  height: 50px !important;
-}
-
-#timerVal {
-  position: relative;
-}
-
-/* MISC */
-
-#ammoDisplay,
-#hudClassIcon,
-#hudClassIcon img,
-#timerDisplay,
-#leaderDisplay,
-.countIcon,
-#curGameInfo,
-#menuWindow.dark,
-.settingsHeader,
-.setHed {
-  border-radius: 2px;
-  background-color: var(--ingame-bg);
-}
-
-#hudClassIcon img {
-  background-color: transparent;
-}
-
-#activateKDM,
-.accountButton,
-.loadoutBtn,
-.settingsBtn,
-.subPassChg,
-.lnkTw,
-.creatorCodeBtn,
-.redVouchBtn,
-#hostMenuBtn,
-.hostCBtn,
-.advancedToggle[style*="background-color"],
-.updDisN,
-.searchBtn,
-.quickJoin,
-.rnkShpBtn,
-.hostPresetBtn,
-.hostToggle,
-#declineBtn,
-.punishButton,
-.compSwpTmB,
-.joinBtn,
-.openCollection,
-.mapFndB,
-.imageListAdd,
-.bundlPopBuyB,
-.menuItemTitle,
-.menuItem::before,
-.setHed,
-.settName {
-  border-radius: 2px;
-  text-shadow: 0px -1.6px 0px var(--ts), 0px 1.6px 0px var(--ts),
-    2px 0px 0px var(--ts), -2px 0px 0px var(--ts), 1.6px 2px 0px var(--ts),
-    -1.6px 2px 0px var(--ts), 1.6px -2px 0px var(--ts),
-    -1.6px -2px 0px var(--ts) !important;
-}
-
-.settingsHeader {
-  position: relative;
-}
-
-#windowHolder {
-  background-color: transparent !important;
-}
-
-.settingsHeader {
-  background-color: transparent;
-}
-
-/* fps & ping */
-
-#curGameInfo,
-.debugInfo {
-  padding: 5px;
-}
-
-#curGameInfo div {
-  font-size: 0;
-}
-
-#pingDisplay .material-icons {
-  font-size: 20px !important;
-}
-
-.adsbygoogle.adsbygoogle-noablate {
-  display: none !important;
-}
-
-#instructions {
-  visibility: hidden;
-}
-
-#chatInput::placeholder {
-  color: transparent;
-}
-
-#chatInputHolder::before {
-  content: "";
-  position: absolute;
-  color: #fff;
-  bottom: 17px;
-  left: 70px;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-#chatHolder:focus-within #chatInputHolder::before {
-  opacity: 0;
-}
-
-#uiBase.onGame #chatHolder {
-  left: 20px !important;
-  bottom: 100px !important;
-}
-
-#chatList {
-  background-color: var(--ingame-bg);
-  width: 381px !important;
-  left: 0px;
-  bottom: 5px;
-}
-
-/* Ingame UI */
 
 /* health */
 
@@ -332,7 +147,7 @@
 #ammoDisplay {
     position: fixed;
     left: calc(53% + 90px);
-    bottom: 70px;
+    bottom: 30px;
     font-size: 64px;
     padding: 0;
     background-position-y: 95px;
@@ -381,10 +196,181 @@
 	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
 }
 
-/*Start of Krunker*/
+/* Removal */
 
-#initLoader {
-  background: #000;
+#ammoIcon {
+    display: none!Important;
+}
+
+#timerIcon {
+    display: none!Important;
+}
+
+
+#aContainer {
+    display: none!important;
+}
+
+
+.imageButton {
+   display: none!important;
+}
+
+.endAHolder {
+    display: none!important;
+}
+
+#endAContainer {
+    display: none!important;
+}
+
+#supportMapCreator {
+    display: none!important;
+}
+
+#supportKrunker {
+    display: none;
+}
+
+.UIB {
+    background-color: transparent !important;
+}
+
+.leftUIB {
+    background-color: transparent !important;
+}
+
+#healthValueHolder {
+    background-color: transparent !important;
+}
+
+#leaderDisplay {
+    background-color: transparent!important;
+}
+
+.countIcon {
+    background-color: transparent!important;   
+}
+
+#merchImg{
+	display: none;
+}
+
+#policeButton{
+    display: none!important;
+}
+
+#curGameInfo{
+    display: none!important;
+}
+
+.weapKey{
+    display: none!important;
+}
+
+#weapDisplay{
+    display: none!important;
+}
+
+#reloadMsg {
+    background: transparent !important;
+}
+
+#streamContainer {
+    display: none;
+}
+
+.youNewDiv, #updateAd, .helpTxtHol, #tlInfHold {
+    display: none;
+}
+
+#seasonLabel, #mainLogoFace {
+    display: none;
+}
+
+/* CHAT */
+#chatInput {
+    padding: 6px 10px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 4px;
+    border: 0 solid #55555580 !important;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatItem {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 4px;
+    border: 0 solid #55555580 !important;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0);
+    font-size: 19px; !important
+}
+
+#uiBase.onMenu #voiceDisplay {
+    left: 490px;
+    bottom: 20px;
+}
+
+#voiceDisplay {
+    z-index: 2;
+    position: absolute;
+    left: 360px;
+    bottom: 20px;
+    margin-left: 10px;
+    width: 98px;
+    padding: 6px;
+    padding-left: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.4);
+    border: 2px solid rgba(0,0,0,.1);
+    pointer-events: all;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Watermark! Remove = Gay */
+
+.twitch{
+    visibility: hidden;
+}
+
+.youtube{
+    visibility: hidden;
+}
+
+.youtube:after {
+     content: 'Made By Envy#3063';
+     font-size: 18px;
+     position: fixed;
+     left: 6%;
+     color: rgb(255 255 255 / 0.85);
+     visibility: visible;
+     text-shadow: none;
+}
+
+.twitch{
+    visibility: hidden;
+}
+
+.twitch:after {
+     content: 'Owned By Dose#0001';
+     font-size: 18px;
+     position: fixed;
+     left: 6%;
+     color: rgb(255 255 255 / 0.85);
+     visibility: visible;
+     text-shadow: none;
+     display: none;
+}
+
+.streamItem{
+    visibility: hidden
+}
+
+
+#menuWindow *{
+    border: hidden;
 }
 
 #loadTipsHolder,
@@ -414,7 +400,7 @@
 
 #lC-cont:before {
   content: "Loading...";
-  color: #fff;
+  color: #fff !important;
   display: block;
   font-size: 25px;
   font-weight: 500;
@@ -441,17 +427,46 @@
 #loadInfoRHolder:before {
   content: "CSS created by Ghosty";
   font-size: 20px;
-  color: #fff;
+  color: #fff !important;
 }
 
 .lC-f {
   animation: loader 10s ease forwards;
   background: ghostwhite;
-  color: #fff;
+  color: #fff !important;
   padding: 0px;
   margin: 0;
   width: 0;
 }
+
+.lds-ring > div {
+    visibility: hidden;
+}
+
+#lC-img {
+    display: none!important;
+}
+
+.lC-t {
+    display: none!important;
+}
+
+.lC-l {
+    display: none!important;
+}
+
+.lC-r {
+    display: none!important;
+}
+
+.lC-bt {
+    display: none!important;
+}
+
+.lC-b {
+    display: none!important;
+}
+
 @keyframes loader {
   0% {
     width: 0;
@@ -580,4 +595,8 @@
     width: 50px;
     height: 50px;
     background-color: transparent;
+}
+
+.buttonPI, .buttonR, .buttonP {
+    border: none !important;
 }
